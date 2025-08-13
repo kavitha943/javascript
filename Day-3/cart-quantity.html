@@ -20,20 +20,58 @@
       console.log(`cartQuantity:${cartQuantity}`);">
     +2
     </button>
+
     <button onclick="
       cartQuantity += 3;
       //cartQuantity = cartQuantity +3;
       console.log(`cartQuantity:${cartQuantity}`);">
       +3
     </button>
-    <button onclick="cartQuantity =0;
-    console.log('cart was reset');
+
+    <button onclick="cartQuantity +=4;
+      console.log(`cartQuantity:${cartQuantity}`);">
+      +4
+    </button>
+
+    <button onclick="
+      cartQuantity += 5;
+      console.log(`cartQuantity:${cartQuantity}`);">
+      +5
+    </button>
+
+    <button onclick="
+      cartQuantity --;
+      //cartQuantity -=1;
+      console.log(`CartQuantity:${cartQuantity}`);">
+      Remove from cart
+    </button>
+
+    <button onclick="
+      cartQuantity -=2;
+      console.log(`CartQuantity:${cartQuantity}`);">
+      -2
+    </button>
+
+    <button onclick="
+      cartQuantity -=3;
+      console.log(`CartQuantity:${cartQuantity}`);">
+      -3
+    </button>
+
+    <button onclick="
+      cartQuantity =0;
+      console.log('cart was reset');
       console.log(`cartQuantity:${cartQuantity}`);">
       Reset Cart
     </button>
 
     <script>
+      //camelCase is used for variable names |ex: cartQuantity
+      //PascalCase is used for class names |ex: CartQuantity
+      //kebab-case is used for file names
+      //snake_case is used for variable names in some languages |ex: cart_quantity | not really used in JS
       let cartQuantity = 0;
     </script>
+
   </body>
 </html>
