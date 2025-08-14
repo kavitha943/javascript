@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      true
+      false
+
+      console.log(typeof true);
+      /*
+      comparision operaters:
+      > greater than
+      < less than
+      >= greater than or equal to
+      <= less than or equal to
+      == equal to : it checks only value (if string and number both are present it converts into one type and equals them)
+      != not equal to
+      === strictly equal to : it checks both value and type
+      !== strictly not equal to
+  
+      */
+
+      console.log(3>5);
+      console.log(5 == '5'); // converts both values to same type and checks
+      console.log(5 === '5'); // checks both value and type and returns false & we use it to avoid conversion behavior
+
+      /*
+      order of operators:
+      1. (..)
+      2. **
+      3. * / %
+      4. + -
+      5. < > <= >= : comparision operators
+      6. == != === !== : comparision operators
+      comparison operators has the lower priority than arithmetic operators
+      */
+
+      /*
+      If-Statements
+      - write multiple groups of code
+      - execute one group of code based on a condition
+      */
+      if (true) {
+        console.log('Hello!');
+      } else {
+        console.log('Goodbye!');
+      }
+       const age = 15;
+
+      if (age >= 16){
+        console.log('You can drive!');
+        console.log('congrats!');
+      } else if (age >= 14) {
+        console.log('Almost there!');
+      } else {
+        console.log('You cannot drive!');
+      }
+      /*
+      Logical Operators
+      - combine multiple conditions
+      - return true or false
+      - && (and) : true if both conditions are true
+      - || (or) : true if at least one condition is true
+      - ! (not) : true if the condition is false
+      -logical operators have the lowest priority than all other operators
+      */  
+     console.log(true && true); // true
+      console.log(true && false); // false
+      console.log(true || false); // true
+      console.log(false || false); // false
+      console.log(!true); // false
+      console.log(!false); // true
+    </script>
+  </body>
+</html>
