@@ -8,53 +8,89 @@
       Show Quantity
     </button>
     <button onclick="
-      cartQuantity += 1;
+      if (cartQuantity + 1 > 10){
+        alert('The cart is full');
+      } else {
+        cartQuantity += 1;
       //cartQuantity++;
       //cartQuantity =cartQuantity +1;
-      console.log(`cartQuantity:${cartQuantity}`);">
+      console.log(`cartQuantity:${cartQuantity}`);
+      }
+      ">
       Add to cart
     </button>
     <button onclick="
-      cartQuantity += 2;
-      //cartQuantity = cartQuantity+2;
-      console.log(`cartQuantity:${cartQuantity}`);">
+      if (cartQuantity + 2 >10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 2;
+        //cartQuantity = cartQuantity +2;
+        console.log(`cartQuantity:${cartQuantity}`);
+      }
+      ">
     +2
     </button>
 
     <button onclick="
-      cartQuantity += 3;
-      //cartQuantity = cartQuantity +3;
-      console.log(`cartQuantity:${cartQuantity}`);">
+      if (cartQuantity + 3 >10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 3;
+        //cartQuantity = cartQuantity +3;
+        console.log(`cartQuantity:${cartQuantity}`);
+      }">
       +3
     </button>
 
-    <button onclick="cartQuantity +=4;
-      console.log(`cartQuantity:${cartQuantity}`);">
+    <button onclick="
+      if (cartQuantity + 4 >10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 4;
+        //cartQuantity = cartQuantity +4;
+        console.log(`cartQuantity:${cartQuantity}`);
+      }">
       +4
     </button>
 
     <button onclick="
-      cartQuantity += 5;
-      console.log(`cartQuantity:${cartQuantity}`);">
+      if (cartQuantity + 5 >10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 5;
+        //cartQuantity = cartQuantity +5;
+        console.log(`cartQuantity:${cartQuantity}`);  
+      }">
       +5
     </button>
 
     <button onclick="
-      cartQuantity --;
-      //cartQuantity -=1;
-      console.log(`CartQuantity:${cartQuantity}`);">
+      if (cartQuantity -1 <0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity -= 1;
+        console.log(`CartQuantity:${cartQuantity}`);
+      }">
       Remove from cart
     </button>
 
     <button onclick="
-      cartQuantity -=2;
-      console.log(`CartQuantity:${cartQuantity}`);">
+      if (cartQuantity - 2 <0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity -= 2;
+        console.log(`CartQuantity:${cartQuantity}`);
+      }">
       -2
     </button>
 
     <button onclick="
-      cartQuantity -=3;
-      console.log(`CartQuantity:${cartQuantity}`);">
+      if (cartQuantity - 3 <0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity -= 3;
+        console.log(`CartQuantity:${cartQuantity}`);
+      }">
       -3
     </button>
 
@@ -71,6 +107,7 @@
       //kebab-case is used for file names
       //snake_case is used for variable names in some languages |ex: cart_quantity | not really used in JS
       let cartQuantity = 0;
+      
     </script>
 
   </body>
