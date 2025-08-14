@@ -1,0 +1,33 @@
+body{
+  background-color: black;  
+}
+.num,.operator {
+  background-color: rgb(105, 103, 103);
+  color: white;
+  border: none;
+  padding: 12px 18px 12px;
+  font-size: 20px;
+  border-radius: 24px;
+  margin: 4px;
+}
+.operator{
+  background-color: orange;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+.clear{
+  background-color: rgb(105, 103, 103);
+  color: white;
+  border: none;
+  padding: 14px 6px 14px;
+  font-size: 15px;
+  border-radius: 24px;
+  margin: 4px;
+}
