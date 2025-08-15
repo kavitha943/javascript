@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    
+    <script>
+      //functions let us  reuse code
+      /*Rules for function names:
+        - can't use special words :ex - function
+        - can't start with a number
+        - can't use special characters except : $,_
+        best practice = use camelCase*/
+      /*function function1() { // defining a function
+        // code to be executed when the function is called
+        console.log("Hello");
+        console.log(2+2);
+      }
+
+      function1(); // calling the function
+      */
+      //function with parameters or arguments
+      /*parameter : lets us put values inside a function
+      syntax rules:
+       same as function names */
+      function calculateTax(cost, taxPercent= 0.1/*default value if not provided) */){
+        console.log(taxPercent);
+        console.log(cost*taxPercent);
+
+      }
+      calculateTax(1000,0.2);//passing a value to the function 
+      calculateTax(5000);
+    </script>
+  </body>
+</html>
