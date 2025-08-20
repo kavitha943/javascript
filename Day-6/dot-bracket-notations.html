@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      /*
+      2- ways to access the properties of an object. and which one should we use?
+      -Dot-notation : default
+      -Bracket-notation : lets us use properties that don't work with dot-notation
+     
+      
+      */
+     const prodcut2={
+      name:'shirt',
+      'delivery-time' : '1 day',
+      rating:{
+        stars: 4.5,
+        count: 87
+      },
+      fun: function(){ //function inside object : Method
+        console.log('function inside object');
+      }
+     };
+     console.log(prodcut2);
+     //dot-notation
+     console.log(product2.name);
+     console.log(product2.delivery-time); // here js throws an error bcoz it considers '-' as arithemetic opertator and tries to do math. so, inorder to avoid that we go with "Bracket-Notation" while accessing the values of an object
+     //bracket-notation
+     console.log(prodcut2['name']);
+     console.log(product2['delivery-time']);
+     //accessing nested object value
+     console.log(product2.rating.count);
+
+     //calling function inside an object
+     product2.fun();
+
+     console.log(typeof console.log());
+    </script>
+  </body>
+</html>
