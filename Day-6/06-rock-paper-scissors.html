@@ -33,19 +33,30 @@
     </button>
 
     <button onclick="
-    score.wins =0,
-    score.losses = 0,
-    score.ties=0
+    score.wins =0;
+    score.losses = 0;
+    score.ties=0;
+    localStorage.removeItem('score');
     ">
-      Reset Score
+      Reset Score <!-- when we click reset score button it should delete the previous score stored in localstorage and start with 0 -->
     </button>
 
     <script>
-       score ={
-        wins:0,
-        losses:0,
-        ties:0
-      };
+      //load the score that we saved in localstorage.setItem() using localStorage.getItem() - this is Json string.
+      //we convert this JSON object to javascript object using json.parse().
+      //when something does not exists in localstorage it will gives us a null value and at the bottom when we try to  access that property on null  that gives us error.
+      let score =JSON.parse(localStorage.getItem('score'));
+
+      if(!score){
+        score = {
+          wins:0,
+          losses:0,
+          ties:0
+        };
+      }
+
+      //console.log(json.parse(localStorage.getItem('score')));
+
 
        function playerGame(playerMove){
         const computerMove = pickComputerMove();
@@ -83,6 +94,9 @@
           } else if (result === 'Tie.') {
             score.ties+=1
           }
+          //after updating the score we save it using localStorage.setItem()
+          //local storage only supports strings
+          localStorage.setItem('score', JSON.stringify(score)); //property-value-pair
 
           alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.
 wins: ${score.wins}, looses: ${score.losses}, Ties: ${score.ties}`);
