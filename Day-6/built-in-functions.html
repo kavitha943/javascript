@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Built-in functions (JSON)
+    </title>
+  </head>
+  <body>
+    <script>
+      /*
+      2-Built-in  functions :
+      1. JSON(Javascript Object Notation)
+        -a syntax difference - all properties and values use double quotes in JSON, does not support functions
+        - similar to JavaScript object
+       why would we use JSON syntax instead of javascript object syntax?
+        -a javascript object only make sense in javascript, on the otherhand  JSON syntax can be understood by almost of the programming languages.
+        we use JSON:
+        -when we send data between computers.
+        -when we store data.
+        Built-in JSON object
+        convert: Javascript Object -- JSON object
+
+      2.local storage : does not delete even if we refresh the page 
+      - save values more permanently. 
+      -variables are temporary
+      - if we refresh/close the page, all the variables are deleted.
+      */
+      const product2={
+        name:'shirt',
+        'delivery-time' : '1 day',
+        rating:{
+          stars: 4.5,
+          count: 87
+        },
+        fun: function(){ //function inside object : Method
+          console.log('function inside object');
+        }
+     };
+     //javascript object to JSON object conversion
+     JSON.stringify(product2);
+
+     //converting back JSON object to javascript object
+     const jsonstring = JSON.stringify(product2);
+     console.log(JSON.parse(jsonstring));
+
+    </script>
+  </body>
+</html>
