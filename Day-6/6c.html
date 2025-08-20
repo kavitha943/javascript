@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>functions with objects</title>
+  </head>
+  <body>
+    <script>
+      const product1={
+        name:'skirt',
+        price: 699
+      };
+      const product2 ={
+        name : 'skirt',
+        price: 599
+      };
+      const product3 = product1;
+      /* approach 1
+      function isSameProduct(product1, product2){
+        console.log(product1===product2);
+      }
+        isSameProduct(product1, product2)
+        isSameProduct(product1, product3)
+      */
+     //approach-2
+      /*
+      function isSameProduct(product1, product2){
+        if ( 
+          product1.name === product2.name && 
+          product1.price === product2.price 
+        ){
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isSameProduct(product1, product2));
+      console.log(isSameProduct(product1,product3));
+      */
+      function isSameProduct(product1, product2){
+        return (
+          product1.name === product2.name && 
+          product1.price === product2.price 
+        );
+      }
+      console.log(isSameProduct(product1, product2));
+      console.log(isSameProduct(product1,product3));
+
+    </script>
+  </body>
+</html>
