@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+  <body>
+    <script>
+      /*const product={
+        price:2095,
+        name:'basketball',
+        ['delivery-time']:'3 days'
+      };
+      console.log(product);
+      product.price = product.price + 500;
+      console.log(product);
+      console.log(product);
+      */
+      const product1={
+        name:'socks',
+        price:399
+      };
+
+      const product2={
+        name:'shirt',
+        price:699
+      };
+      function comparePrice(product1, product2){
+        if (product1.price <product2.price){
+          return product1;
+        } else if (product2.price<product1.price){
+          return product2
+        }
+      }
+      console.log(comparePrice(product1, product2));
+    </script>
+  </body>
+</html>
