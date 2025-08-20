@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      What is an Object?
+      -lets us  group multiple values together
+      - let us use multiple values together
+      */
+       const product={
+        name : 'socks', // property-value pair
+        price : 1090
+      };
+
+      //displaying an object
+      console.log(typeof product);
+
+      //displaying or accessing  value associated to specific property
+      console.log(product.name);
+
+      //changing the value of property
+      product.name='cotton-socks';
+
+      //adding a value to an object
+      product.newProperty = true;
+      console.log(product);
+
+      //deletes a property
+      delete product.newProperty;
+      console.log(product);
+
+      /*AUTO-BOXING: special feature means javascript automatically wraps the strings in an Object like a Box
+       - simple values like strings can also have properties and methods 
+       - auto-boxing will also works with other type of values like numbers and booleans
+       - it does not work on null and undefined*/
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase);
+
+      //objects are references
+      const object1={
+        message :'hello'
+      };
+      //here object1 and object2 points to the same object in computer's memory.
+      const object2 = object1; //copy by reference
+
+      object1.message = 'Good Job!';
+      console.log(object1);
+      console.log(object2);
+      //we can not compare objects directly
+      const object3={
+        message: 'Good job!'
+      };
+      console.log(object3===object1); // this code compares the references , not the values inside  and results in false
+      console.log(object2 === object1);//points to the same reference and results in true
+
+      const object4={
+        message: 'Good job!'
+      };
+      //const message = object4.message;
+      const {message} = object4;
+    </script>
+  </body>
+</html>
