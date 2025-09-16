@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM projects</title>
+    <style>
+      body{
+        font-family: arial;
+        
+      }
+      .subscribe-button{
+        border:none;
+        background-color: black;
+        color: white;
+        padding: 10px 15px 10px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+      .cost-input{
+        font-size: 15px;
+        padding: 10px; /*padding four sides*/
+      }
+      .calculate-button{
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 12px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- this approach works only when there are no spaces around the button 
+         use .innerHTML only when u r sure there are no spaces-->
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+      Subscribe();"
+      class="js-subscribe-button subscribe-button" >
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <!-- clicks , keydowns are events
+         onclick and onkeydowns are event listeners-->
+    <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+      console.log('typing');">
+    <button class="calculate-button" onclick="
+      calculateTotal();
+    ">Calculate</button>
+    
+    <p class="js-total-cost"></p>
+
+    <script>
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input'); //get input element in string format
+        //cosole.log(inputElement.value);
+        //let cost = inputElement.value; //by default it is string
+        //console.log(typeof cost);
+
+        let cost = Number(inputElement.value); //convert string to number
+        if ( cost <40 ){
+          cost = cost +10
+        }
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+
+      function Subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        //this approach works only when there are no spaces around the button use .innerHTML only when u r sure there are no spaces
+        //.classlist:gives us control of the class attribute 
+        if (buttonElement.innerHTML==='Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+          //classList is collection of obejects and methods
+
+          buttonElement.classList.add('is-subscribed');//no dot here
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+
+        //this approach works even when there are spaces around the button use .innerText to eliminate the spaces
+        /*const buttonEle = document.querySelector('.js-subscribe-button1');
+        if (buttonEle.innerText==='Subscribe'){
+          buttonEle.innerText = 'Subscribed';
+        } else {
+          buttonEle.innerText = 'Subscribe';
+        }
+        */
+      }
+        
+
+     
+        
+    </script>
+  </body>
+</html>
