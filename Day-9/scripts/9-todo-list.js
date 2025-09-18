@@ -1,7 +1,7 @@
-/* using Javascript:
+/* Main Idea of  Javascript:
  we can 1. save the data
         2.Generate the HTML
-        Make it interactive */
+        3.Make it interactive */
 
 const todoList = [];
 renderTodoList();
@@ -18,12 +18,12 @@ function renderTodoList() {
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
 function addTodo() {
-  const inputElement = document.querySelector('.js-name-input');// this entire html element
+  const inputElement = document.querySelector('.js-name-input');// this gets entire html element
   //console.log(inputElement);
   const name = inputElement.value;//this gets only value of input
   //console.log(name);
   todoList.push(name);
   console.log(todoList);
-  //inputElement.value = '';
+  inputElement.value = '';
   renderTodoList();
 }
