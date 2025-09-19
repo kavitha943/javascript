@@ -4,7 +4,7 @@
         3.Make it interactive */
 
 const todoList = [];
-renderTodoList();
+//renderTodoList();
 function renderTodoList() {
 
 
