@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays and loops</title>
+</head>
+<body>
+  <script>
+    //create a function that takes an array of strings and returns an array where the string 'egg' is removed.
+    function removeEgg(foods){
+      let resultArray=[];
+      for(let i=0;i<foods.length;i++){
+        if(foods[i]==='egg'){
+          continue;
+        }
+        // We don't need to have an else here because
+          // the only way to reach this code is if the 
+          // if-statement above is false.
+        resultArray.push(foods[i]);
+        
+      }
+      return resultArray;
+    }
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+  </script>
+</body>
+</html>
