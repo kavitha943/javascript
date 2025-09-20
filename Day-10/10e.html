@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays and loops </title>
+</head>
+<body>
+  <script>
+    // arrays have a method called .reverse(), which reverses the order of the values in the array.using .reverse(),update 10d to only remove the last 2 eggs from the array
+    function removeEgg(foods){
+      // To remove the last 2 'egg', reverse the array first.
+      const reversedArray=foods.reverse();
+      
+      let resultArray=[];
+      let removedEggs=0;
+      for(let i=0;i<reversedArray.length;i++){
+        if(reversedArray[i]==='egg' && removedEggs < 2 ){
+          removedEggs++;
+          continue;
+        }
+
+        resultArray.push(reversedArray[i]);
+        
+      }
+      // At the end, remember to .reverse() back the result.
+      return resultArray.reverse();
+      
+    }
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+    
+  </script>
+</body>
+</html>

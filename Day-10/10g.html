@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //
+    function findIndex(array,word){
+      let index=-1;
+      for(let i=0;i<array.length;i++){
+        if(array[i]===word){
+          //index=i;
+          return i;
+        }
+      }
+      return index;
+    }
+    //unique function takes an array of strings and returns an array where each string only appear once. try to use the findIndex() to check wether newarray has duplicates
+    function unique(array){
+      const newArray=[];
+      for(let i=0;i<array.length;i++){
+        const word =array[i];
+        // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // newarray. If it's not in the newarray
+          // (index is -1), then add it to the newarray.
+        if(findIndex(newArray,word)===-1){
+          newArray.push(word);
+        }
+      }
+      return newArray;
+
+    }
+
+    console.log(unique(['green','red','blue','red']));
+    console.log(unique(['green','red','green','red']));
+  </script>
+</body>
+</html>

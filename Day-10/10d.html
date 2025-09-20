@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays and loops </title>
+</head>
+<body>
+  <script>
+    // updating arrays and loops-continue script to only remove the first 2 eggs from the array.
+    function removeEgg(foods){
+      let resultArray=[];
+      let removedEggs=0;
+      for(let i=0;i<foods.length;i++){
+        if(foods[i]==='egg' && removedEggs < 2 ){
+          removedEggs++;
+          continue;
+        }
+
+        resultArray.push(foods[i]);
+        
+      }
+      return resultArray;
+    }
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+  </script>
+</body>
+</html>
