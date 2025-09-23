@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="displayMessage();" class="js-button">Add to cart</button>
+  <p class="js-message"></p>
+  <script>
+    let timeoutId;
+    
+    function displayMessage(){
+      const messageElement=document.querySelector('.js-message');
+      //console.log(messageElement);
+      messageElement.innerHTML='Added';
+      // First, cancel the previous timeout so that
+      // it doesn't remove the message too quickly.
+      clearTimeout(timeoutId);
+      timeoutId=setTimeout(function(){
+      
+
+        messageElement.innerHTML='';
+        
+      },1500);
+      //to clear timeout
+       //clearTimeout(timeoutId);//this immediately cancels out the timeout(it will never run and message will never disappear)
+      
+      
+    }
+  </script>
+      
+  
+</body>
+</html>
