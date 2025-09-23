@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asynchronous code</title>
+</head>
+<body>
+  <script>
+    /*asynchronous code: -code which is executed at a later time not immediately/-wont wait for a line to finish before going to the next line
+    advantage:
+      - it doesn't block our code for 3 seconds instead sets timer in the bg and goes to nxt line*/
+    
+    console.log('Start');
+
+    setTimeout(function(){
+      console.log('Inside setTimeout');
+      console.log('End of setTimeout');
+    },2000);//2 seconds
+
+    console.log('End');
+    //synchronous code: -code which is executed line by line in order/-will wait for a line to finish before going to the next line
+    //callback function: -a function which is passed as an argument to another function and is executed at a later time/
+    /*setTimeout takes two parameters: a function and a time in milliseconds
+      - it will keep running a function in the future.*/
+    setInterval(function(){
+      console.log('Inside setInterval');
+    },3000);//3 seconds (repeatedly calls the function after every 3 seconds
+    console.log('nextline2');
+  </script>
+</body>
+</html>
